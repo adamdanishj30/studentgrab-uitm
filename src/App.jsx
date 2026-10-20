@@ -1,16 +1,17 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import Header from './components/Header';
-import LiveWeatherCard from './components/LiveWeatherCard';
-import CalculatorForm from './components/CalculatorForm';
-import FareEstimateCard from './components/FareEstimateCard';
-import TemplateGenerator from './components/TemplateGenerator';
-import OrderParserBox from './components/OrderParserBox';
-import PriceListModal from './components/PriceListModal';
-import RecentTrips from './components/RecentTrips';
-import BottomNav from './components/BottomNav';
-import { calculateFare, matchLocation } from './utils/fareCalculator';
+import {
+  Header,
+  BottomNav,
+  CalculatorForm,
+  FareEstimateCard,
+  RecentTrips,
+  OrderParserBox,
+  TemplateGenerator,
+  LiveWeatherCard,
+  PriceListModal,
+} from './components';
+import { calculateFare, matchLocation, fetchShahAlamWeather } from './utils';
 import { ZONES, SURCHARGE_RULES } from './data/priceData';
-import { fetchShahAlamWeather } from './utils/weatherService';
 
 export default function App() {
   const [appMode, setAppMode] = useState('student'); // 'student' | 'driver'

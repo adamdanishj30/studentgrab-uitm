@@ -6,7 +6,7 @@ import {
   MessageSquare 
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { formatStudentOrderTemplate, formatDriverQuoteReply } from '../utils/orderParser';
+import { formatStudentOrderTemplate, formatDriverQuoteReply } from '../../utils/orderParser';
 
 export default function TemplateGenerator({ tripData, estimate, appMode }) {
   const [activeTab, setActiveTab] = useState(appMode === 'driver' ? 'driver' : 'student');

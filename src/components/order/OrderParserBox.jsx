@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ClipboardPaste, Sparkles, Check, RotateCcw } from 'lucide-react';
-import { parseOrderText } from '../utils/orderParser';
+import { parseOrderText } from '../../utils/orderParser';
 
 const EXAMPLE_DURRZ = `🚗 durrz 🍀 🌻
 

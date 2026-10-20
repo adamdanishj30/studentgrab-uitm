@@ -11,7 +11,7 @@ import {
   Moon,
   Luggage
 } from 'lucide-react';
-import { ZONES } from '../data/priceData';
+import { ZONES } from '../../data/priceData';
 
 export default function PriceListModal({ isOpen, onClose, onSelectLocation }) {
   const [searchTerm, setSearchTerm] = useState('');

@@ -18,8 +18,8 @@ import {
   ALL_LOCATIONS, 
   QUICK_PICKUP_SPOTS, 
   QUICK_DROP_SPOTS 
-} from '../data/priceData';
-import { matchLocation } from '../utils/fareCalculator';
+} from '../../data/priceData';
+import { matchLocation } from '../../utils/fareCalculator';
 
 export default function CalculatorForm({
   tripData,

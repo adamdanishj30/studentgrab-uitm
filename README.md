@@ -24,7 +24,11 @@
      - UiTM Puncak Alam: RM 40 ~ 50
      - KLIA 1 / 2: RM 70 ~ 90
 
-3. **Mandatory Surcharges**
+3. **Live Weather Radar (Open-Meteo)**
+   - Real-time Shah Alam weather integration.
+   - Automatically detects rainfall and applies the +RM 2~4 weather surcharge.
+
+4. **Mandatory Surcharges**
    - **Peak Hours (+RM 2~5)**: 7:30–9:30 AM / 5:00–8:00 PM (Auto-detected from clock)
    - **Rainy Weather (+RM 2~4)**: Heavy rain / traffic
    - **Midnight / Gate Closed (+RM 2~4)**: 12:00 AM – 6:00 AM
@@ -33,13 +37,45 @@
    - **Late Fee**: +RM 1 per 10 mins waiting time
    - **Highway Tolls**: Custom toll add-on
 
-4. **Community Floor Price Protection**
-   - Displays clear policy badges ensuring student drivers are not subjected to price cuts below the floor rates.
-
 5. **WhatsApp & Telegram Generator**
    - 1-click formatted post generator for students.
    - 1-click quote reply generator for transporters.
    - Direct WhatsApp integration link (`api.whatsapp.com`).
+
+---
+
+## 📁 Project Directory Structure
+
+```text
+StudentGrab/
+├── archive/                     # Archived & legacy files
+│   ├── boilerplate/             # Unused initial Vite starter files (App.css, icons)
+│   └── README.md                # Archive log & descriptions
+├── public/                      # Static assets & icons
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── components/              # Modular UI components
+│   │   ├── layout/              # App chrome (Header, BottomNav)
+│   │   ├── estimator/           # Fare calculator, cards & trip history
+│   │   ├── order/               # Smart paste & message generator
+│   │   ├── weather/             # Live weather radar card
+│   │   ├── modals/              # Official rate guide modal
+│   │   └── index.js             # Clean barrel exports
+│   ├── data/                    # Authoritative pricing & location records
+│   │   └── priceData.js
+│   ├── utils/                   # Business logic, parser & weather API
+│   │   ├── fareCalculator.js
+│   │   ├── orderParser.js
+│   │   ├── weatherService.js
+│   │   └── index.js
+│   ├── App.jsx                  # Main application orchestrator
+│   ├── index.css                # Tailwind CSS styling
+│   └── main.jsx                 # React root mount
+├── index.html                   # HTML entry point
+├── package.json                 # Dependencies & scripts
+└── vite.config.js               # Vite & Tailwind configuration
+```
 
 ---
 

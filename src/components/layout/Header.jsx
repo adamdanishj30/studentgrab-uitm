@@ -10,7 +10,7 @@ import {
   Compass, 
   Sparkles 
 } from 'lucide-react';
-import { SURCHARGE_RULES } from '../data/priceData';
+import { SURCHARGE_RULES } from '../../data/priceData';
 
 export default function Header({ 
   onOpenPriceList, 
